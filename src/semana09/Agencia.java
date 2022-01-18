@@ -13,4 +13,13 @@ public class Agencia {
     public int getQuantidadeContas() {
         return contas.size();
     }
+
+    public Conta buscaPorTitular(String nomeTitular) {
+        for (Conta conta : contas) {
+            if (conta.getNomeTitular().equals(nomeTitular)) {
+                return conta;
+            }
+        }
+        return null;
+    }
 }
