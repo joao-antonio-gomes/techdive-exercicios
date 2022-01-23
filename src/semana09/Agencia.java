@@ -16,7 +16,7 @@ public class Agencia {
 
     public Conta buscaPorTitular(String nomeTitular) {
         for (Conta conta : contas) {
-            if (conta.getNomeTitular().equals(nomeTitular)) {
+            if (conta.getClienteTitular().getNomeTitular().equals(nomeTitular)) {
                 return conta;
             }
         }

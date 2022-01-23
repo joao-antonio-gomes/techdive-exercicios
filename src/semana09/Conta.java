@@ -1,17 +1,17 @@
 package semana09;
 
 abstract public class Conta {
-    private String nomeTitular;
+    private Cliente clienteTitular;
 
-    public Conta(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
+    public Conta(Cliente clienteTitular) {
+        this.clienteTitular = clienteTitular;
     }
 
-    public String getNomeTitular() {
-        return nomeTitular;
+    public Cliente getClienteTitular() {
+        return clienteTitular;
     }
 
-    public void setNomeTitular(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
+    public void setClienteTitular(Cliente clienteTitular) {
+        this.clienteTitular = clienteTitular;
     }
 }
