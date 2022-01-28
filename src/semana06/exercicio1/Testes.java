@@ -1,4 +1,4 @@
-package semana06.aula02.exercicio1;
+package semana06.exercicio1;
 
 public class Testes {
 

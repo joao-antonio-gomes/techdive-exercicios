@@ -1,4 +1,4 @@
-package semana06.aula02.exercicio3;
+package semana06.exercicio3;
 
 public class Notebook extends Computador {
     private String bateria;
