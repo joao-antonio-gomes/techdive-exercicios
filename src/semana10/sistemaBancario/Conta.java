@@ -3,23 +3,20 @@ package semana10.sistemaBancario;
 import java.io.*;
 
 public class Conta {
-    private static int numeroContas;
     private Cliente cliente;
     private int numeroDaConta;
     private int saldo = 0;
 
-    public Conta(Cliente cliente) throws IOException {
+    public Conta(Cliente cliente, int numeroDaConta) throws IOException {
         this.cliente = cliente;
-        this.numeroDaConta = numeroContas;
+        this.numeroDaConta = numeroDaConta;
         this.registraConta();
-        numeroContas++;
     }
 
-    public Conta(String nome) throws IOException {
+    public Conta(String nome, int numeroDaConta) throws IOException {
         this.cliente = new Cliente(nome);
-        this.numeroDaConta = numeroContas;
+        this.numeroDaConta = numeroDaConta;
         this.registraConta();
-        numeroContas++;
     }
 
     public Cliente getCliente() {
