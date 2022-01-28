@@ -7,7 +7,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ExercicioCinco {
+public class Exercicio5 {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

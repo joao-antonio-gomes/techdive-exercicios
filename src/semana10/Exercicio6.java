@@ -2,7 +2,7 @@ package semana10;
 
 import java.io.*;
 
-public class ExercicioSeis {
+public class Exercicio6 {
     public static void main(String[] args) throws IOException {
         File file = new File("lista_de_filmes.txt");
         String absolutePathFile = file.getAbsolutePath();

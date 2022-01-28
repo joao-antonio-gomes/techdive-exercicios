@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class ExercicioUm {
+public class Exercicio1 {
     private static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Digite sua data de nascimento (dd/mm/aaaa): ");

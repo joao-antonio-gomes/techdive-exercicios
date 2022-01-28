@@ -3,7 +3,7 @@ package semana10;
 import java.io.*;
 import java.util.Scanner;
 
-public class ExercicioSete {
+public class Exercicio7 {
     public static void main(String[] args) throws IOException {
         File file = new File("lista_de_filmes.txt");
         String absolutePath = file.getAbsolutePath();

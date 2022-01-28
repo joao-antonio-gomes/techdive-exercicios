@@ -1,12 +1,11 @@
 package semana10;
 
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class ExercicioDois {
+public class Exercicio2 {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

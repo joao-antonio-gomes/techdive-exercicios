@@ -4,7 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class ExercicioQuatro {
+public class Exercicio4 {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
