@@ -22,13 +22,9 @@ public class ExercicioUm {
             dataNascimento = LocalDate.of(ano, mes, dia);
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException exception) {
             System.out.println("Data inválida!");
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            for (int i = 0; i < 10; i++) {
+                System.out.println();
+            }
             main(args);
         }
 
