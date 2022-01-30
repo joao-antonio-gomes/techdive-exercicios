@@ -7,7 +7,13 @@ import java.util.Map;
 
 public class Teste {
     public static void main(String[] args) throws IOException {
-        criaContasBancoDeDados();
+        Conta joao = new Conta("Joao", 001);
+        Conta maria = new Conta("Maria", 002);
+
+        joao.deposita(100);
+        maria.deposita(25);
+        joao.sacar(25);
+        joao.transferir(maria, 50);
     }
 
     public static void criaContasBancoDeDados() throws IOException {

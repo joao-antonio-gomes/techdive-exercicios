@@ -1,12 +1,6 @@
-Nome Cliente: João
-Numero Conta: 0
+Nome Cliente: Joao
+Numero Conta: 1
 ----------------------------------------
-Nome Cliente: João
-Numero Conta: 0
-----------------------------------------
-Nome Cliente:  João
-Numero Conta: 0
-----------------------------------------
-Nome Cliente:  João
-Numero Conta: 0
+Nome Cliente: Maria
+Numero Conta: 2
 ----------------------------------------

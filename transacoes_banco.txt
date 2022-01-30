@@ -1,0 +1,26 @@
+Operação: Depósito
+Saldo antes depósito:0.0
+Valor depósito:100
+Saldo atual:100
+----------------------------------------
+Operação: Depósito
+Saldo antes depósito:0.0
+Valor depósito:25
+Saldo atual:25
+----------------------------------------
+Operação: Saque
+Saldo antes transferência:100.0
+Valor transferido:25
+Saldo atual:75
+----------------------------------------
+Operação: Depósito
+Saldo antes depósito:25.0
+Valor depósito:50
+Saldo atual:75
+----------------------------------------
+Operação: Transferência
+Conta origem:1
+Saldo atual conta origem:25
+Conta destino:2
+Saldo transferido:50
+----------------------------------------

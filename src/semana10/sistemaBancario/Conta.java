@@ -1,6 +1,8 @@
 package semana10.sistemaBancario;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class Conta {
     private Cliente cliente;
@@ -43,29 +45,53 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public void deposita(int valor) {
+    public void deposita(int valor) throws IOException {
+        double saldoAnterior = this.saldo;
         this.saldo += valor;
         System.out.println("Depositado valor de R$ " + valor);
+        String mensagem =
+                "Operação: Depósito" +
+                "\nSaldo antes depósito:" + saldoAnterior +
+                "\nValor depósito:" + valor +
+                "\nSaldo atual:" + this.saldo +
+                "\n----------------------------------------";
+        this.salvarHistorico(mensagem);
     }
 
     public boolean verificaSeTemValorMaiorIgualQue(int valor) {
         return this.saldo >= valor;
     }
 
-    public void sacar(int valor) {
+    public void sacar(int valor) throws IOException {
         if (verificaSeTemValorMaiorIgualQue(valor)) {
+            double saldoAnterior = this.saldo;
             this.saldo -= valor;
             System.out.println("Sacado valor de R$ " + valor);
+            String mensagem =
+                    "Operação: Saque" +
+                    "\nSaldo antes transferência:" + saldoAnterior +
+                    "\nValor transferido:" + valor +
+                    "\nSaldo atual:" + this.saldo +
+                    "\n----------------------------------------";;
+            this.salvarHistorico(mensagem);
             return;
         }
 
         System.out.println("Você não tem todo esse valor na conta para sacar!");
     }
 
-    public void transferir(Conta conta, int valor) {
+    public void transferir(Conta conta, int valor) throws IOException {
         if (verificaSeTemValorMaiorIgualQue(valor)) {
             this.saldo -= valor;
             conta.deposita(valor);
+            String mensagem =
+                    "Operação: Transferência" +
+                    "\nConta origem:" + this.numeroDaConta +
+                    "\nSaldo atual conta origem:" + this.saldo +
+                    "\nConta destino:" + conta.getNumeroDaConta() +
+                    "\nSaldo transferido:" + valor +
+                    "\n----------------------------------------";;
+            this.salvarHistorico(mensagem);
             return;
         }
 
@@ -74,15 +100,24 @@ public class Conta {
 
     @Override
     public String toString() {
-        return "Nome Cliente: " + this.cliente.getNome() +
-                "\nNumero Conta: " + this.numeroDaConta +
-                "\n----------------------------------------";
+        return
+                "Nome Cliente: " + this.cliente.getNome() +
+                        "\nNumero Conta: " + this.numeroDaConta +
+                        "\n----------------------------------------";
     }
 
     public void registraConta() throws IOException {
         FileWriter listaDeContas = new FileWriter("lista_de_contas.txt", true);
         PrintWriter pw = new PrintWriter(listaDeContas);
         pw.append(this.toString());
+        pw.println();
+        pw.close();
+    }
+
+    public void salvarHistorico(String msg) throws IOException {
+        FileWriter listaDeContas = new FileWriter("transacoes_banco.txt", true);
+        PrintWriter pw = new PrintWriter(listaDeContas);
+        pw.append(msg);
         pw.println();
         pw.close();
     }
